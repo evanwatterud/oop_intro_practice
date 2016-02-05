@@ -1,5 +1,3 @@
-require "mathn"
-
 class Rectangle
   def initialize(length, width, x = 0, y = 0)
     @length = length
@@ -8,12 +6,24 @@ class Rectangle
     @y = y
   end
 
-  def diagonal
-    return Math.sqrt(@length**2 + @width**2)
+  def move_right
+    @x += 1
   end
 
-  def increment(x, amount = 1)
-    return x + amount
+  def move_up
+    @y += 1
+  end
+
+  def move_left
+    @x -= 1
+  end
+
+  def move_down
+    @y -= 1
+  end
+
+  def diagonal
+    return Math.sqrt(@length**2 + @width**2)
   end
 
   def area
